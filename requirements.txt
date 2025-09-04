@@ -1,0 +1,15 @@
+streamlit==1.37.1
+pandas==2.2.2
+numpy==1.26.4
+python-dotenv==1.0.1
+scikit-learn==1.5.1
+sentence-transformers==3.0.1
+faiss-cpu==1.8.0.post1
+transformers==4.42.4
+torch>=2.2.0
+openai==1.37.0
+tiktoken==0.7.0
+imapclient==3.0.1
+beautifulsoup4==4.12.3
+matplotlib==3.9.0
+regex==2024.5.15
