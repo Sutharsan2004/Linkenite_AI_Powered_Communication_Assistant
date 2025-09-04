@@ -1,0 +1,6 @@
+sender,subject,body,sent_date
+eve@startup.io,Help required with account verification,Do you support integration with third-party APIs? Specifically, I’m looking for CRM integration options.,19-08-2025 00:58:09
+john@contoso.com,Support: Cannot access dashboard,Hi team, I cannot access the dashboard since morning. It says '403 Forbidden'. Please resolve this immediately.,19-08-2025 09:10:33
+mila@retailhub.com,Request for product roadmap,Could you share the tentative product roadmap for Q4? We need to plan our integrations accordingly.,19-08-2025 13:24:51
+aisha@finserve.org,Query: Billing discrepancy,We were billed twice for the same invoice last month. This is critical for our accounting. Please check and refund.,19-08-2025 18:05:12
+support@vendor.io,Help: API latency issue,We’re observing high latency (>4s) on the /v1/orders API in EU region. Any known incidents?,19-08-2025 22:40:02
