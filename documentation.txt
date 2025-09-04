@@ -1,0 +1,85 @@
+AI-Powered Communication Assistant
+
+Demo Video - https://drive.google.com/drive/folders/1Fv6i13Pd7Ak_XWYcSbFWat89k54a89XE?usp=drive_link
+
+1. Problem Statement
+
+As I read, Modern organizations receive thousands of support-related emails daily. Manually filtering, prioritizing, and responding to these emails is time-consuming and error-prone. The goal of this project is to build an AI-powered assistant that automates email retrieval, categorization, prioritization, information extraction, and response generation, while presenting everything on a user-friendly dashboard.
+
+2. System Architecture & Workflow
+
+Data Ingestion
+
+Emails are retrieved either from a CSV dataset or directly via IMAP (Gmail).
+
+Only support-related emails are filtered using subject keywords (Support, Help, Request, Query).
+
+Preprocessing & Extraction
+
+Extract sender, subject, body, and timestamp.
+
+Identify contact details, requirements, and key phrases using regex + NLP.
+
+Categorization & Prioritization
+
+Sentiment Analysis (Positive, Neutral, Negative) using Hugging Face pipeline.
+
+Priority Detection (Urgent/Not Urgent) based on keywords like “immediately,” “critical,” “cannot access.”
+
+Emails are sorted in a priority queue so urgent issues appear first.
+
+Context-Aware Response Generation
+
+Uses OpenAI GPT (if API key available) or Hugging Face models as fallback.
+
+Retrieval-Augmented Generation (RAG) integrates with a small knowledge base to answer product-related queries.
+
+Responses maintain a professional tone and adapt to customer sentiment (empathetic if negative).
+
+Dashboard & Analytics
+
+Built with Streamlit for easy interaction.
+
+Displays all filtered emails with extracted details.
+
+Shows AI-generated draft responses (editable before sending).
+
+Analytics: sentiment distribution, urgent vs non-urgent, email stats (received, resolved, pending).
+
+Storage
+
+SQLite database stores emails, metadata, and response history for persistence.
+
+3. Tech Stack
+
+Backend: Python (Streamlit, Flask-style APIs, Regex, SQLite)
+
+AI/NLP: Hugging Face Transformers (sentiment, embeddings), OpenAI GPT, SentenceTransformers (RAG)
+
+Frontend/Dashboard: Streamlit with interactive charts and tables
+
+Database: SQLite (lightweight storage)
+
+4. Key Features
+
+Automated email retrieval & filtering
+
+Sentiment + priority classification
+
+RAG-powered contextual replies
+
+Urgent-first queue processing
+
+Structured information extraction (contacts, requirements, keywords)
+
+Interactive dashboard with analytics
+
+5. Impact
+
+Saves support teams’ time by reducing manual triage.
+
+Ensures faster and empathetic replies → improves customer satisfaction.
+
+Extracts actionable insights from unstructured emails.
+
+Scalable design → can integrate with enterprise email systems.
