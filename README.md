@@ -2,6 +2,8 @@
 
 End-to-end solution to ingest support emails, prioritize, extract key info, draft AI responses with RAG, and visualize everything on a dashboard.
 
+Demo Video - https://drive.google.com/drive/folders/1Fv6i13Pd7Ak_XWYcSbFWat89k54a89XE?usp=drive_link
+
 ## 🧩 Features
 - **Email Retrieval**: CSV demo or IMAP (Gmail/Outlook) via .env.
 - **Filtering**: Subject contains "Support", "Query", "Request", "Help".
@@ -47,22 +49,3 @@ cp .env.sample .env
 streamlit run app/app.py
 ```
 
-## 🔌 IMAP (Optional)
-Set `ENABLE_IMAP=true` in `.env` and fill IMAP_* values. Then select **IMAP mailbox** in the sidebar and click **Ingest Now**.
-
-## 📹 Demo Video Script (suggested)
-1. Intro (30s): Problem + what your app does.
-2. Ingestion (1m): Show CSV and IMAP modes.
-3. Dashboard (2m): Walk through prioritized list, extracted details, AI draft.
-4. Analytics (1m): Explain charts and metrics.
-5. Wrap (30s): Architecture overview + next steps.
-
-## 🏗 Architecture (brief)
-- Ingestion -> Filter -> Sentiment -> Priority -> RAG Retrieve -> LLM Draft -> Store -> Dashboard actions.
-- RAG: sentence-transformers + FAISS over `/kb/*.md` chunks.
-- LLM: OpenAI Chat Completions (optional).
-
-## ✅ Notes for Judges
-- Works fully offline (w/o OpenAI) using fallback template logic.
-- Replace `kb/*.md` with your product docs to improve answers.
-- All code is organized for easy review.
